@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { Gpio } from './gpio';
-import { GpioService } from './gpio.service';
+import { GpioService } from './gpios.service';
 
 @Component({
   selector: 'gpios',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  templateUrl: './gpios.component.html',
+  styleUrls: ['./gpios.component.css'],
   providers: [GpioService]
 })
 
