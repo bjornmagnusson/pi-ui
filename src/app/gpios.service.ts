@@ -11,12 +11,12 @@ export class GpioService {
         return Promise.resolve(GPIOS);
     }
 
-    private heroesUrl = 'http://192.168.0.110:8080/v1/gpios';
+    private gpiosUrl = 'http://192.168.0.110:8080/v1/gpios';
 
   constructor(private http: Http) { }
 
   getGpios(): Promise<Gpio[]> {
-    return this.http.get(this.heroesUrl)
+    return this.http.get(this.gpiosUrl)
                .toPromise()
                .then(response => response.json() as Gpio[])
                .catch(this.handleError);
