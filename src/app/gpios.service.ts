@@ -11,7 +11,7 @@ export class GpioService {
         return Promise.resolve(GPIOS);
     }
 
-    private gpiosUrl = 'http://localhost:8080/v1/gpios';
+    private gpiosUrl = 'http://pi1.local:8080/v1/gpios';
 
   constructor(private http: Http) { }
 
