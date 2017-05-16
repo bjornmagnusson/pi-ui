@@ -3,6 +3,7 @@ services:
 - docker
 language: bash
 script:
+- yarn install && npm test  
 - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 - docker-compose version && docker-compose build
 - |
