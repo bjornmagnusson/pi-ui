@@ -1,9 +1,11 @@
 sudo: required
 services:
 - docker
-language: bash
+language: node_js
+node_js:
+  - "6"
 script:
-- yarn install && npm test  
+- yarn install && npm test
 - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 - docker-compose version && docker-compose build
 - |
