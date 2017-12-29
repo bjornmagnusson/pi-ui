@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { GpiosComponent } from './gpios.component';
+import { ModeComponent } from './mode.component';
 
 @NgModule({
   declarations: [
-    GpiosComponent
+    GpiosComponent,
+    ModeComponent
   ],
   imports: [
     BrowserModule,
@@ -15,6 +17,6 @@ import { GpiosComponent } from './gpios.component';
     HttpModule
   ],
   providers: [],
-  bootstrap: [GpiosComponent]
+  bootstrap: [GpiosComponent,ModeComponent]
 })
 export class AppModule { }
