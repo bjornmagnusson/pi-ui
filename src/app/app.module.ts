@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { GpiosComponent } from './gpios.component';
 import { ModeComponent } from './mode.component';
+import { LedModeComponent } from './ledMode.component';
 
 @NgModule({
   declarations: [
     GpiosComponent,
-    ModeComponent
+    ModeComponent,
+    LedModeComponent
   ],
   imports: [
     BrowserModule,
@@ -17,6 +19,6 @@ import { ModeComponent } from './mode.component';
     HttpModule
   ],
   providers: [],
-  bootstrap: [GpiosComponent,ModeComponent]
+  bootstrap: [GpiosComponent,ModeComponent,LedModeComponent]
 })
 export class AppModule { }

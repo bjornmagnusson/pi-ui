@@ -12,7 +12,7 @@ import { ModeService } from './mode.service';
 
 export class ModeComponent implements OnInit {
   title = 'Mode';
-  mode: Mode;
+  mode: Mode = {name: "", value: 0};
 
   constructor(private modeService: ModeService) {}
 
