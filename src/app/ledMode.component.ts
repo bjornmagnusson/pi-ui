@@ -15,7 +15,7 @@ export class LedModeComponent {
   constructor(private ledModeService: ledModeService) {}
 
   clicked(event) {
-    console.log('Button clicked')
+    console.log('Toggling LED mode')
     this.ledModeService.getLedMode();
   }
 }

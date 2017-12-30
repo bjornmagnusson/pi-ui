@@ -14,13 +14,19 @@ export class GpiosComponent implements OnInit {
   title = 'GPIOs';
   gpios: Gpio[];
 
+  interval: any;
+
   constructor(private gpioService: GpioService) {}
 
   getGpios(): void {
+      console.log("Fetching GPIOs")
       this.gpioService.getGpios().then(gpios => this.gpios = gpios);
   }
 
   ngOnInit(): void {
       this.getGpios();
+      this.interval = setInterval(() => {
+        this.getGpios();
+    }, 1000);
   }
 }
