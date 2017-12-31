@@ -4,3 +4,6 @@ services:
     image: bjornmagnusson/pi-ui
     build:
       context: .
+      dockerfile: Dockerfile.ng
+    ports:
+      - "80:80"
