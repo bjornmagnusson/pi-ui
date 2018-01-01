@@ -4,13 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { GpiosComponent } from './gpios.component';
-import { ModeComponent } from './mode.component';
 import { LedModeComponent } from './ledMode.component';
 
 @NgModule({
   declarations: [
     GpiosComponent,
-    ModeComponent,
     LedModeComponent
   ],
   imports: [
@@ -19,6 +17,6 @@ import { LedModeComponent } from './ledMode.component';
     HttpModule
   ],
   providers: [],
-  bootstrap: [GpiosComponent,ModeComponent,LedModeComponent]
+  bootstrap: [GpiosComponent,LedModeComponent]
 })
 export class AppModule { }
