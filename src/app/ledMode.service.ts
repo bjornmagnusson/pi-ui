@@ -5,7 +5,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class ledModeService {
-  private ledModeUrl = 'http://pi1.local:8080/v1/ledMode';
+  private ledModeUrl = 'http://192.168.0.105:8080/v1/ledMode';
 
   constructor(private http: Http) { }
 

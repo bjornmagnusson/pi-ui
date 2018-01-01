@@ -15,14 +15,16 @@ WORKDIR /ng-app
 COPY . .
 
 ## Build the angular app in production mode and store the artifacts in dist folder
-RUN $(npm bin)/ng build 
+RUN $(npm bin)/ng build
 
 
 ### STAGE 2: Setup ###
+FROM resin/rpi-raspbian:jessie-20170111
 
-FROM nginx:1.13.3-alpine
+RUN apt-get update && apt-get install -y nginx
 
 ## Copy our default nginx config
+COPY nginx/nginx.conf /etc/nginx
 COPY nginx/default.conf /etc/nginx/conf.d/
 
 ## Remove default nginx website
