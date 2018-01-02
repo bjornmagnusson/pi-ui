@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},
+  "main": "app.js",
   "scripts": {
     "ng": "ng",
     "build:prod": "webpack --config ./src/tsconfig.json",
-    "start": "ng serve",
+    "start": "node app.js",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
@@ -22,11 +23,13 @@
     "@angular/platform-browser": "4.3.5",
     "@angular/platform-browser-dynamic": "4.3.5",
     "@angular/router": "4.3.5",
+    "body-parser": "~1.0.1",
     "core-js": "^2.4.1",
+    "express": "^4.15.3",
     "rxjs": "^5.0.1",
     "ts-helpers": "^1.1.1",
-    "zone.js": "^0.8.16",
-    "express": "^4.15.3"
+    "unirest": "^0.5.1",
+    "zone.js": "^0.8.16"
   },
   "devDependencies": {
     "@angular/cli": "1.3.1",
