@@ -2,6 +2,8 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/bjornmagnusson/pi-ui.svg)](https://greenkeeper.io/)
 
+[![Known Vulnerabilities](https://snyk.io/test/github/bjornmagnusson/pi-ui/badge.svg)](https://snyk.io/test/github/bjornmagnusson/pi-ui)
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
 ## Development server
