@@ -19,7 +19,7 @@ RUN $(npm bin)/ng build
 
 
 ### STAGE 2: Setup ###
-FROM resin/raspberry-pi-node:8
+FROM resin/raspberry-pi-node:8.5-slim
 
 ## From 'builder' stage copy over the artifacts in dist folder to default nginx public folder
 COPY --from=builder /ng-app/dist /
