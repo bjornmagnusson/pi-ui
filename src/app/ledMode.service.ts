@@ -5,12 +5,12 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class ledModeService {
-  private ledModeUrl = 'http://192.168.0.105:8080/v1/ledMode';
+  private ledModeUrl = '/ledMode';
 
   constructor(private http: Http) { }
 
   getLedMode() {
-    return this.http.get(this.ledModeUrl)
+    return this.http.post(this.ledModeUrl, '')
                .toPromise()
                .catch(this.handleError);
   }
