@@ -24,7 +24,6 @@ FROM resin/raspberry-pi-node:8.5-slim
 ## From 'builder' stage copy over the artifacts in dist folder to default nginx public folder
 COPY --from=builder /ng-app/dist /
 COPY --from=builder /ng-app/node_modules /node_modules
-RUN ls -al
 ADD app.js /
 WORKDIR /
 
