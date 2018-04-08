@@ -26,9 +26,9 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               docker login -u $DOCKER_USER -p $DOCKER_PASS
-              docker-compose -f docker-compose.dev.yml push
+              docker-compose push
             fi
             if [[ ! -z "${CIRCLE_TAG}" ]]; then
               docker login -u $DOCKER_USER -p $DOCKER_PASS
-              TAG=${CIRCLE_TAG} docker-compose -f docker-compose.dev.yml push
+              TAG=${CIRCLE_TAG} docker-compose push
             fi
