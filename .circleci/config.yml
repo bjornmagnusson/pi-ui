@@ -2,8 +2,12 @@ version: 2
 jobs:
   build:
     docker:
-      - image: docker:stable-git 
+      - image: docker:stable-git
     steps:
+      - run:
+          name: Prepare environment
+          command: |
+            apk add --no-cache curl
       - checkout
       - run:
           name: Install Docker Compose
