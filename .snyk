@@ -1,4 +1,144 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
 version: v1.10.2
-ignore: {}
-patch: {}
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:hoek:20180212':
+    - unirest > request > hawk > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.612Z'
+    - unirest > request > hawk > boom > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.612Z'
+    - unirest > request > hawk > sntp > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.612Z'
+    - unirest > request > hawk > cryptiles > boom > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.612Z'
+    - node-pre-gyp > request > hawk > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.612Z'
+    - node-pre-gyp > request > hawk > boom > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.612Z'
+    - node-pre-gyp > request > hawk > sntp > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.613Z'
+    - node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.613Z'
+    - libcipm > npm-lifecycle > node-gyp > request > hawk > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.613Z'
+    - libcipm > npm-lifecycle > node-gyp > request > hawk > boom > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.613Z'
+    - libcipm > npm-lifecycle > node-gyp > request > hawk > sntp > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.613Z'
+    - libcipm > npm-lifecycle > node-gyp > request > hawk > cryptiles > boom > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.613Z'
+    - npm > request > hawk > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.613Z'
+    - npm > request > hawk > boom > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.613Z'
+    - npm > request > hawk > sntp > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.613Z'
+    - npm > request > hawk > cryptiles > boom > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.613Z'
+    - npm > npm-registry-client > request > hawk > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.613Z'
+    - npm > npm-registry-client > request > hawk > boom > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.613Z'
+    - npm > npm-registry-client > request > hawk > sntp > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.614Z'
+    - npm > npm-registry-client > request > hawk > cryptiles > boom > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.614Z'
+    - npm > npm-lifecycle > node-gyp > request > hawk > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.614Z'
+    - npm > npm-lifecycle > node-gyp > request > hawk > boom > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.614Z'
+    - npm > npm-lifecycle > node-gyp > request > hawk > sntp > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.614Z'
+    - npm > npm-lifecycle > node-gyp > request > hawk > cryptiles > boom > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.614Z'
+    - npm > libcipm > npm-lifecycle > node-gyp > request > hawk > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.614Z'
+    - npm > libcipm > npm-lifecycle > node-gyp > request > hawk > boom > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.614Z'
+    - npm > libcipm > npm-lifecycle > node-gyp > request > hawk > sntp > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.614Z'
+    - npm > libcipm > npm-lifecycle > node-gyp > request > hawk > cryptiles > boom > hoek:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+  'npm:https-proxy-agent:20180402':
+    - npm > npm-profile > make-fetch-happen > https-proxy-agent:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+  'npm:lodash:20180130':
+    - cli-table2 > lodash:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+    - npm > cli-table2 > lodash:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+  'npm:mime:20170907':
+    - unirest > mime:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+  'npm:sshpk:20180409':
+    - npm-registry-client > request > http-signature > sshpk:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+    - node-pre-gyp > request > http-signature > sshpk:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+    - libcipm > npm-lifecycle > node-gyp > request > http-signature > sshpk:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+    - npm > request > http-signature > sshpk:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+    - npm > npm-registry-client > request > http-signature > sshpk:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+    - npm > npm-lifecycle > node-gyp > request > http-signature > sshpk:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+    - npm > libcipm > npm-lifecycle > node-gyp > request > http-signature > sshpk:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+  'npm:ssri:20180214':
+    - npm-profile > make-fetch-happen > ssri:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+    - libcipm > pacote > make-fetch-happen > ssri:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+  'npm:tunnel-agent:20170305':
+    - unirest > request > tunnel-agent:
+        reason: None given
+        expires: '2018-05-09T18:23:40.615Z'
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:tough-cookie:20170905':
+    - libcipm > npm-lifecycle > node-gyp > request > tough-cookie:
+        patched: '2018-04-09T18:20:27.176Z'
+    - node-pre-gyp > request > tough-cookie:
+        patched: '2018-04-09T18:20:27.176Z'
