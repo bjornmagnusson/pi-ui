@@ -1,6 +1,6 @@
 # PiUi
 
-[![Build Status](https://travis-ci.org/bjornmagnusson/pi-ui.svg?branch=master)](https://travis-ci.org/bjornmagnusson/pi-ui) [![Greenkeeper badge](https://badges.greenkeeper.io/bjornmagnusson/pi-ui.svg)](https://greenkeeper.io/) [![Known Vulnerabilities](https://snyk.io/test/github/bjornmagnusson/pi-ui/badge.svg)](https://snyk.io/test/github/bjornmagnusson/pi-ui)
+[![CircleCI](https://circleci.com/gh/bjornmagnusson/pi-ui.svg?style=svg)](https://circleci.com/gh/bjornmagnusson/pi-ui) [![Greenkeeper badge](https://badges.greenkeeper.io/bjornmagnusson/pi-ui.svg)](https://greenkeeper.io/) [![Known Vulnerabilities](https://snyk.io/test/github/bjornmagnusson/pi-ui/badge.svg)](https://snyk.io/test/github/bjornmagnusson/pi-ui)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
