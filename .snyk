@@ -207,3 +207,6 @@ patch:
   'npm:tunnel-agent:20170305':
     - unirest > request > tunnel-agent:
         patched: '2018-06-30T23:06:27.584Z'
+  'npm:lodash:20180130':
+    - npm > cli-table2 > lodash:
+        patched: '2018-07-07T21:47:35.846Z'
