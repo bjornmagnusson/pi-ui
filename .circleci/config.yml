@@ -10,7 +10,8 @@ jobs:
           name: Build Docker image
           command: |
             docker run --rm --privileged multiarch/qemu-user-static:register --reset
-            docker image build -t bjornmagnusson/pi-ui .
+            docker pull bjornmagnusson/pi-ui
+            docker image build --cache-from bjornmagnusson/pi-ui -t bjornmagnusson/pi-ui .
             if [[ ! -z "${CIRCLE_TAG}" ]]; then
               docker image build -t bjornmagnusson/pi-ui:${CIRCLE_TAG} .
             fi
