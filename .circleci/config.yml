@@ -31,6 +31,3 @@ workflows:
     jobs:
       - build:
           context: DOCKER_HUB
-          filters:
-            branches:
-              only: master
