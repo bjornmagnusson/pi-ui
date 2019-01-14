@@ -1,28 +1,18 @@
+FROM node:8-alpine as dependencies
+COPY package.json yarn.lock ./
+RUN yarn install
 
-
-# We label our stage as 'builder'
 FROM node:8-alpine as builder
-
-COPY package.json package-lock.json yarn.lock ./
-
-RUN npm set progress=false && npm config set depth 0 && npm cache clean --force
-
-## Storing node modules on a separate layer will prevent unnecessary npm installs at each build
-RUN yarn install && mkdir /ng-app && cp -R ./node_modules ./ng-app
+RUN mkdir /ng-app
+COPY --from=dependencies /node_modules ./ng-app/node_modules
 WORKDIR /ng-app
-
-COPY . .
-
-## Build the angular app in production mode and store the artifacts in dist folder
+ADD angular-cli.json .
+ADD src src
 RUN $(npm bin)/ng build
 
-
-### STAGE 2: Setup ###
-FROM resin/raspberry-pi-node:8.5-slim
-
-## From 'builder' stage copy over the artifacts in dist folder to default nginx public folder
+FROM balenalib/raspberrypi3-alpine-node:8-run as distribution
+COPY --from=dependencies /node_modules /node_modules
 COPY --from=builder /ng-app/dist /
-COPY --from=builder /ng-app/node_modules /node_modules
 ADD app.js /
 WORKDIR /
 
