@@ -35,9 +35,9 @@
     "request": "2.88.0",
     "zone.js": "^0.8.26",
     "chai": "^4.1.1",
-    "chai-http": "^4.0.0",
+    "chai-http": "^4.2.1",
     "mocha": "5.2.0",
-    "supertest": "^3.0.0"
+    "supertest": "^3.4.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.12.0",
