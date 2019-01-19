@@ -8,8 +8,8 @@
     "ng": "ng",
     "build:prod": "webpack --config ./src/tsconfig.json",
     "start": "node app.js",
+    "test": "mocha --exit 'test/app.spec.js'",
     "lint": "tslint \"src/**/*.ts\"",
-    "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor",
     "snyk-protect": "snyk protect"
@@ -26,14 +26,18 @@
     "@angular/router": "7.2.1",
     "body-parser": "~1.18.3",
     "core-js": "^2.6.2",
-    "express": "^4.16.4",
+    "express": "^4.15.3",
     "npm": "6.6.0",
     "rxjs": "^6.0.0",
     "snyk": "1.122.0",
     "ts-helpers": "^1.1.1",
     "tslib": "^1.9.0",
-    "unirest": "0.5.1",
-    "zone.js": "^0.8.26"
+    "request": "2.88.0",
+    "zone.js": "^0.8.26",
+    "chai": "^4.1.1",
+    "chai-http": "^4.0.0",
+    "mocha": "5.2.0",
+    "supertest": "^3.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.12.0",
