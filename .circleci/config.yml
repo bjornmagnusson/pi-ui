@@ -11,6 +11,7 @@ jobs:
           name: Build and push Docker image
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
+            docker build --target test .
             docker build -t bjornmagnusson/pi-ui:${CIRCLE_SHA1} .
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               docker image build -t bjornmagnusson/pi-ui:canary .
