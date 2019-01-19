@@ -20,7 +20,7 @@ export class GpiosComponent implements OnInit {
 
   getGpios(): void {
       console.log("Fetching GPIOs")
-      this.gpioService.getGpios().then(gpios => this.gpios = gpios);
+      this.gpioService.getGpios().toPromise().then(gpios => this.gpios = gpios);
   }
 
   ngOnInit(): void {

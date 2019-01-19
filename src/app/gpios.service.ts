@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
+import {Observable} from 'rxjs';
 
-import 'rxjs/add/operator/toPromise';
 import { Gpio } from './gpio';
 import { GPIOS } from './mock-gpios';
 
@@ -13,14 +13,12 @@ export class GpioService {
 
     private gpiosUrl = '/gpios';
 
-  constructor(private http: Http) { }
+  constructor(private httpc: HttpClient) { }
 
-  getGpios(): Promise<Gpio[]> {
-    return this.http.get(this.gpiosUrl)
-               .toPromise()
-               .then(response => response.json() as Gpio[])
-               .catch(this.handleError);
-  }
+  getGpios():Observable<any>{
+            return this.httpc.get(this.gpiosUrl);
+        }
+
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only

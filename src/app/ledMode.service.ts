@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
-
-import 'rxjs/add/operator/toPromise';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class ledModeService {
   private ledModeUrl = '/ledMode';
 
-  constructor(private http: Http) { }
+  constructor(private httpc: HttpClient) { }
 
   getLedMode() {
-    return this.http.post(this.ledModeUrl, '')
-               .toPromise()
-               .catch(this.handleError);
+    return this.httpc.post(this.ledModeUrl, '')
+                      .toPromise()
+                      .catch(this.handleError);
   }
 
   private handleError(error: any): Promise<any> {

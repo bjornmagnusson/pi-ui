@@ -6,7 +6,7 @@ FROM node:8-alpine as builder
 RUN mkdir /ng-app
 COPY --from=dependencies /node_modules ./ng-app/node_modules
 WORKDIR /ng-app
-ADD angular-cli.json .
+ADD angular.json .
 ADD src src
 RUN $(npm bin)/ng build
 
