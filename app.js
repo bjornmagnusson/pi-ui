@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 3000
-const API_HOST = process.env.API_HOST || "pi1.local"
+const API_HOST = process.env.API_HOST || "192.168.0.107"
 const API_PORT = process.env.API_PORT || 8080
 const API_URL = "http://" + API_HOST + ":" + API_PORT
 

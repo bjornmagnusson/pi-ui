@@ -8,24 +8,17 @@ jobs:
       - setup_remote_docker:
           version: 18.05.0-ce
       - run:
-          name: Build Docker image
+          name: Build and push Docker image
           command: |
-            docker version
-            docker image build -t bjornmagnusson/pi-ui .
+            docker login -u $DOCKER_USER -p $DOCKER_PASS
+            docker build -t bjornmagnusson/pi-ui:${CIRCLE_SHA1} .
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              docker image build -t bjornmagnusson/pi-ui:canary .
+            fi
             if [[ ! -z "${CIRCLE_TAG}" ]]; then
               docker image build -t bjornmagnusson/pi-ui:${CIRCLE_TAG} .
             fi
-      - deploy:
-          name: Push Docker image to Docker Hub
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              docker login -u $DOCKER_USER -p $DOCKER_PASS
-              docker push bjornmagnusson/pi-ui
-            fi
-            if [[ ! -z "${CIRCLE_TAG}" ]]; then
-              docker login -u $DOCKER_USER -p $DOCKER_PASS
-              docker push bjornmagnusson/pi-ui:${CIRCLE_TAG}
-            fi
+            docker push bjornmagnusson/pi-ui
 workflows:
   version: 2
   build:

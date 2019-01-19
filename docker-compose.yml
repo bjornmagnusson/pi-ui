@@ -2,16 +2,12 @@ version: '3'
 
 services:
   ui:
-    image: bjornmagnusson/pi-ui
+    image: bjornmagnusson/pi-ui:${TAG:-latest}
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "80:3000"
     environment:
-      - API_HOST=192.168.0.105
+      - API_HOST=192.168.0.107
       - API_PORT=8080
-    deploy:
-      placement:
-        constraints:
-          - node.hostname == pi3
