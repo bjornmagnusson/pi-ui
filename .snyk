@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.10.2
+version: v1.13.5
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:hoek:20180212':
@@ -106,15 +106,9 @@ ignore:
     - npm-registry-client > request > http-signature > sshpk:
         reason: None given
         expires: '2018-05-09T18:23:40.615Z'
-      libcipm > npm-lifecycle > node-gyp > request > http-signature > sshpk:
-        reason: None given
-        expires: '2019-02-18T18:41:35.085Z'
     - node-pre-gyp > request > http-signature > sshpk:
         reason: None given
         expires: '2018-05-09T18:23:40.615Z'
-      libnpm > npm-lifecycle > node-gyp > request > http-signature > sshpk:
-        reason: None given
-        expires: '2019-02-18T18:41:35.085Z'
     - libcipm > npm-lifecycle > node-gyp > request > http-signature > sshpk:
         reason: None given
         expires: '2018-05-09T18:23:40.615Z'
@@ -130,6 +124,12 @@ ignore:
     - npm > libcipm > npm-lifecycle > node-gyp > request > http-signature > sshpk:
         reason: None given
         expires: '2018-05-09T18:23:40.615Z'
+    - libcipm > npm-lifecycle > node-gyp > request > http-signature > sshpk:
+        reason: None given
+        expires: '2019-02-18T18:41:35.085Z'
+    - libnpm > npm-lifecycle > node-gyp > request > http-signature > sshpk:
+        reason: None given
+        expires: '2019-02-18T18:41:35.085Z'
   'npm:ssri:20180214':
     - npm-profile > make-fetch-happen > ssri:
         reason: None given
@@ -145,15 +145,9 @@ ignore:
     - snyk > snyk-resolve-deps > clite > update-notifier > latest-version > package-json > registry-auth-token > rc > deep-extend:
         reason: None given
         expires: '2018-05-28T10:38:08.019Z'
-      libnpx > update-notifier > latest-version > package-json > registry-auth-token > rc > deep-extend:
-        reason: None given
-        expires: '2019-02-18T18:41:35.085Z'
     - snyk > snyk-resolve-deps > clite > update-notifier > latest-version > package-json > registry-url > rc > deep-extend:
         reason: None given
         expires: '2018-05-28T10:38:08.020Z'
-      libnpx > update-notifier > latest-version > package-json > registry-url > rc > deep-extend:
-        reason: None given
-        expires: '2019-02-18T18:41:35.085Z'
     - snyk > update-notifier > latest-version > package-json > registry-url > rc > deep-extend:
         reason: None given
         expires: '2018-05-28T10:38:08.020Z'
@@ -184,6 +178,12 @@ ignore:
     - npm > update-notifier > latest-version > package-json > registry-url > rc > deep-extend:
         reason: None given
         expires: '2018-05-28T10:38:08.067Z'
+    - libnpx > update-notifier > latest-version > package-json > registry-auth-token > rc > deep-extend:
+        reason: None given
+        expires: '2019-02-18T18:41:35.085Z'
+    - libnpx > update-notifier > latest-version > package-json > registry-url > rc > deep-extend:
+        reason: None given
+        expires: '2019-02-18T18:41:35.085Z'
   'npm:cryptiles:20180710':
     - unirest > request > hawk > cryptiles:
         reason: None given
@@ -205,20 +205,12 @@ patch:
   'npm:hoek:20180212':
     - npm > npm-lifecycle > node-gyp > request > hawk > sntp > hoek:
         patched: '2018-06-23T21:56:45.205Z'
-      unirest > request > hawk > boom > hoek:
-        patched: '2019-01-19T18:40:15.698Z'
     - unirest > request > hawk > hoek:
         patched: '2018-06-23T21:56:45.205Z'
-      unirest > request > hawk > sntp > hoek:
-        patched: '2019-01-19T18:40:15.698Z'
     - unirest > request > hawk > sntp > hoek:
         patched: '2018-06-23T21:56:45.205Z'
-      unirest > request > hawk > cryptiles > boom > hoek:
-        patched: '2019-01-19T18:40:15.698Z'
     - unirest > request > hawk > cryptiles > boom > hoek:
         patched: '2018-06-23T21:56:45.205Z'
-      unirest > request > hawk > hoek:
-        patched: '2019-01-19T18:40:15.698Z'
     - npm > npm-lifecycle > node-gyp > request > hawk > hoek:
         patched: '2018-06-23T21:56:45.205Z'
     - npm > npm-lifecycle > node-gyp > request > hawk > boom > hoek:
@@ -243,6 +235,14 @@ patch:
         patched: '2019-01-13T21:53:53.668Z'
     - unirest > request > hawk > cryptiles > boom > hoek:
         patched: '2019-01-13T21:53:53.668Z'
+    - unirest > request > hawk > boom > hoek:
+        patched: '2019-01-19T18:40:15.698Z'
+    - unirest > request > hawk > sntp > hoek:
+        patched: '2019-01-19T18:40:15.698Z'
+    - unirest > request > hawk > cryptiles > boom > hoek:
+        patched: '2019-01-19T18:40:15.698Z'
+    - unirest > request > hawk > hoek:
+        patched: '2019-01-19T18:40:15.698Z'
   'npm:tunnel-agent:20170305':
     - unirest > request > tunnel-agent:
         patched: '2019-01-19T18:40:15.698Z'
@@ -254,3 +254,36 @@ patch:
         patched: '2019-01-19T18:40:15.698Z'
     - libcipm > npm-lifecycle > node-gyp > request > extend:
         patched: '2019-01-19T18:40:15.698Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - npm > libnpm > pacote > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > pacote > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > pacote > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > libnpmhook > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > libnpm > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > libcipm > pacote > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > libnpm > pacote > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > libnpm > libnpmpublish > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > libnpm > libnpmteam > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > libnpm > npm-profile > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > libnpm > libnpmaccess > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > libnpm > libnpmhook > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > libcipm > pacote > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > libnpm > libnpmorg > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
+    - npm > libnpm > libnpmsearch > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2019-10-05T07:59:37.344Z'
