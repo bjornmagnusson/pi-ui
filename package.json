@@ -12,13 +12,14 @@
     "lint": "tslint \"src/**/*.ts\"",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor",
-    "snyk-protect": "snyk protect"
+    "snyk-protect": "snyk-protect",
+    "prepare": "yarn run snyk-protect"
   },
   "private": true,
   "dependencies": {
     "@angular/common": "7.2.1",
     "@angular/compiler": "7.2.1",
-    "@angular/core": "7.2.1",
+    "@angular/core": "11.0.5",
     "@angular/forms": "7.2.1",
     "@angular/http": "7.2.1",
     "@angular/platform-browser": "7.2.1",
@@ -27,13 +28,13 @@
     "body-parser": "~1.18.3",
     "core-js": "^2.6.2",
     "express": "^4.15.3",
-    "npm": "6.6.0",
+    "npm": "7.21.0",
     "rxjs": "^6.0.0",
-    "snyk": "1.124.1",
     "ts-helpers": "^1.1.1",
     "tslib": "^1.9.0",
     "request": "2.88.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.12.0",
